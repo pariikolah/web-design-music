@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/regester.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html">COMMUNITY</a>
+            </nav>
+            
+        </div>
+    </header>
+
+<main class="stage">
+    <div class="panel">
+
+        
+        <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#7a1f2e"/>
+                        <stop offset="0.55" stop-color="#d4606f"/>
+                        <stop offset="1" stop-color="#ffd1cf"/>
+                    </linearGradient>
+                </defs>
+                <rect width="600" height="600" fill="url(#sky)"/>
+                <g fill="#5a1422" opacity="0.75">
+                    <ellipse cx="120" cy="120" rx="130" ry="50"/>
+                    <ellipse cx="200" cy="95" rx="80" ry="45"/>
+                    <ellipse cx="60" cy="150" rx="90" ry="40"/>
+                </g>
+                <g fill="#ffb8bd" opacity="0.9">
+                    <ellipse cx="230" cy="215" rx="110" ry="22"/>
+                    <ellipse cx="150" cy="235" rx="80" ry="16"/>
+                </g>
+                <g fill="#a23a52" opacity="0.8">
+                    <ellipse cx="140" cy="380" rx="150" ry="45"/>
+                    <ellipse cx="250" cy="355" rx="90" ry="38"/>
+                    <ellipse cx="60" cy="410" rx="100" ry="35"/>
+                </g>
+                <g fill="#ffe3e0" opacity="0.95">
+                    <ellipse cx="120" cy="520" rx="170" ry="50"/>
+                    <ellipse cx="260" cy="540" rx="130" ry="40"/>
+                    <ellipse cx="40" cy="560" rx="110" ry="45"/>
+                </g>
+            </svg>
+        </div>
+
+        
+        <form class="card" id="regForm" novalidate>
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <h1>Create an account</h1>
+            <p class="sub">Enter your details to get started</p>
+
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" autocomplete="name">
+                <small class="error" id="nameErr"></small>
+            </div>
+
+            <div class="field">
+                <label for="userid">ID</label>
+                <input type="text" id="userid" placeholder="your_id" autocomplete="username">
+                <small class="error" id="useridErr"></small>
+            </div>
+
+            <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="name@example.com" autocomplete="email">
+                <small class="error" id="emailErr"></small>
+            </div>
+
+            <div class="field">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="18" min="1" max="120">
+                <small class="error" id="ageErr"></small>
+            </div>
+
+            <div class="field">
+                <label for="password">Set a password</label>
+                <div class="pass-wrap">
+                    <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+                    <button type="button" class="eye" id="togglePass" aria-label="Show password">👁</button>
+                </div>
+                <ul class="rules" id="rules">
+                    <li data-rule="length">At least 8 characters</li>
+                    <li data-rule="upper">An uppercase English letter (A-Z)</li>
+                    <li data-rule="lower">A lowercase English letter (a-z)</li>
+                    <li data-rule="digit">A number (0-9)</li>
+                </ul>
+                <small class="error" id="passwordErr"></small>
+            </div>
+
+            <label class="terms">
+                <input type="checkbox" id="terms">
+                <span>I agree to the <a href="#">Terms &amp; Conditions</a></span>
+            </label>
+            <small class="error" id="termsErr"></small>
+
+            <button type="submit" class="btn">Create account</button>
+            <p class="success" id="success"></p>
+
+            <p class="login">Already have an account? <a href="#">Log in</a></p>
+        </form>
+
+    </div>
+</main>
+
+<script src="js/regester.js"></script>
+</body>
+</html>

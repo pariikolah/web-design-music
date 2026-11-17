@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artist-NEWJEANS</title>
+    <link rel="stylesheet" href="css/style-artist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html" class="active">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html">COMMUNITY</a>
+            </nav>
+            <div class="nav-icons">
+                <div class="nav-search">
+                    <span><i class="fa-solid fa-search"></i></span>
+                    <input type="text" placeholder="search for your idol...">
+                </div>
+                <button class="icon-btn profile-btn" id="profileBtn" aria-label="Profile / Login" aria-haspopup="dialog">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>NEWJEANS<br><span class="accent">뉴진스</span></h1>
+            <h5 style="color: gray;">GIRL GROUP ✦ ADOR (HYBE)</h5>
+            <div class="artistinfo">
+                <h4>debut : 2022</h4>
+                <h4>status : active (4 members)</h4>
+            </div>
+            <button class="btn-primary">FOLLOW ARTIST</button>
+        </div>
+        <div class="grouppic">
+            <img src="asset/nj.jpg" alt="">
+        </div>
+
+    </section>
+    
+    
+    <section class="about">
+        <h2 class="section-title">ABOUT</h2>
+        <p class="about-text">
+            NEWJEANS (뉴진스) is a South Korean girl group formed by ADOR, a label under HYBE. The group debuted in July 2022 with the single
+            "Attention" and became famous for hits like "Hype Boy", "Ditto", "OMG", and "Super Shy". After a long legal dispute with ADOR, a Seoul court
+            ruled in October 2025 that their contract stays valid, and the members returned to the agency. Danielle left the group after her contract
+            was terminated, so NewJeans now continues with four members — Minji, Hanni, Haerin, and Hyein. Their fandom is called Bunnies.
+        </p>
+    </section>
+
+   
+    <h2 class="section-title members-title">MEMBERS</h2>
+
+    <section class="members">
+        <div class="memberspic">
+            <img src="asset/minji.jpg" alt="Minji">
+            <div class="member-info">
+                <h3>Minji</h3>
+                <p class="stage-name">Kim Minji</p>
+                <p>Position: Leader, Vocalist</p>
+                <p>Birthday: May 7, 2004</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/hanni.jpg" alt="Hanni">
+            <div class="member-info">
+                <h3>Hanni</h3>
+                <p class="stage-name">Pham Ngoc Han</p>
+                <p>Position: Vocalist</p>
+                <p>Birthday: Oct 6, 2004</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/haerin.jpg" alt="Haerin">
+            <div class="member-info">
+                <h3>Haerin</h3>
+                <p class="stage-name">Kang Haerin</p>
+                <p>Position: Vocalist</p>
+                <p>Birthday: May 15, 2006</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/hyein.jpg" alt="Hyein">
+            <div class="member-info">
+                <h3>Hyein</h3>
+                <p class="stage-name">Lee Hyein</p>
+                <p>Position: Vocalist, Maknae</p>
+                <p>Birthday: Apr 21, 2008</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <h2 class="section-title songs-title">SONGS</h2>
+    <div class="songs">
+       
+    </div>
+    <div class="modal-overlay" id="loginOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="loginClose" aria-label="Close">&times;</button>
+            <h3 id="loginTitle">Login</h3>
+            <p class="modal-sub">Login to share and follow your idols.</p>
+            <div class="login-fields">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="example@gmail.com" autocomplete="email">
+                <span class="modal-error" id="emailError"></span>
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="english letters and numbers" autocomplete="current-password">
+                <span class="modal-error" id="passError"></span>
+
+                <button class="modal-btn" id="loginBtn">Login</button>
+                <p class="modal-ok" id="loginMsg"></p>
+            </div>
+            <p class="modal-register">Don't have an account? <a href="regester.html">Register now</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

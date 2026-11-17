@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artist-BTS</title>
+    <link rel="stylesheet" href="css/style-artist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html" class="active">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html">COMMUNITY</a>
+            </nav>
+            <div class="nav-icons">
+                <div class="nav-search">
+                    <span><i class="fa-solid fa-search"></i></span>
+                    <input type="text" placeholder="search for your idol...">
+                </div>
+                <button class="icon-btn profile-btn" id="profileBtn" aria-label="Profile / Login" aria-haspopup="dialog">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>BTS<br><span class="accent">방탄소년단</span></h1>
+            <h5 style="color: gray;">BOY GROUP ✦ HYBE</h5>
+            <div class="artistinfo">
+                <h4>dabut : 2013</h4>
+                <h4>status : active</h4>
+            </div>
+            <button class="btn-primary">FOLLOW ARTIST</button>
+        </div>
+        <div class="grouppic">
+            <img src="asset/bts-g.jpg" alt="">
+        </div>
+
+    </section>
+    
+    
+    <section class="about">
+        <h2 class="section-title">ABOUT</h2>
+        <p class="about-text">
+            BTS (Bangtan Sonyeondan / 방탄소년단) is a South Korean boy band formed in 2013 under HYBE (formerly Big Hit Entertainment).
+            The group consists of seven members — RM, Jin, Suga, J-Hope, Jimin, V, and Jungkook — who take part in writing and producing
+            much of their own music. Known for socially conscious lyrics and genre-blending sound, BTS has become one of the
+            best-selling and most influential music acts in the world, with a massive global fanbase known as ARMY.
+        </p>
+    </section>
+
+   
+    <h2 class="section-title members-title">MEMBERS</h2>
+
+    <section class="members">
+        <div class="memberspic">
+            <img src="asset/rm.jpg" alt="RM">
+            <div class="member-info">
+                <h3>RM</h3>
+                <p class="stage-name">Kim Namjoon</p>
+                <p>Position: Leader, Main Rapper</p>
+                <p>Birthday: Sep 12, 1994</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/jin.jpg" alt="Jin">
+            <div class="member-info">
+                <h3>Jin</h3>
+                <p class="stage-name">Kim Seokjin</p>
+                <p>Position: Visual, Vocalist</p>
+                <p>Birthday: Dec 4, 1992</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/suga.jpg" alt="Suga">
+            <div class="member-info">
+                <h3>Suga</h3>
+                <p class="stage-name">Min Yoongi</p>
+                <p>Position: Lead Rapper</p>
+                <p>Birthday: Mar 9, 1993</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/jhope.jpg" alt="J-Hope">
+            <div class="member-info">
+                <h3>J-Hope</h3>
+                <p class="stage-name">Jung Hoseok</p>
+                <p>Position: Main Dancer, Rapper</p>
+                <p>Birthday: Feb 18, 1994</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/jimin.jpg" alt="Jimin">
+            <div class="member-info">
+                <h3>Jimin</h3>
+                <p class="stage-name">Park Jimin</p>
+                <p>Position: Main Dancer, Vocalist</p>
+                <p>Birthday: Oct 13, 1995</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/v.jpg" alt="V">
+            <div class="member-info">
+                <h3>V</h3>
+                <p class="stage-name">Kim Taehyung</p>
+                <p>Position: Vocalist</p>
+                <p>Birthday: Dec 30, 1995</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/jk.jpg" alt="Jungkook">
+            <div class="member-info">
+                <h3>Jungkook</h3>
+                <p class="stage-name">Jeon Jungkook</p>
+                <p>Position: Main Vocalist, Center</p>
+                <p>Birthday: Sep 1, 1997</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+
+    </section>
+
+   
+    <h2 class="section-title songs-title">SONGS</h2>
+    <div class="songs">
+
+    <audio id="audioPlayer"></audio>
+
+    <div class="player-bar">
+        <div class="now-playing">
+            <h4 id="playerTitle">Select a song</h4>
+            <p id="playerArtist">BTS</p>
+        </div>
+        <div class="player-buttons">
+            <button id="prevSong" aria-label="Previous song"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="playPause" class="play-big" aria-label="Play / Pause"><i class="fa-solid fa-play"></i></button>
+            <button id="nextSong" aria-label="Next song"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+        <div class="player-progress">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="seekBar" value="0" min="0" max="100">
+            <span id="totalTime">0:00</span>
+        </div>
+    </div>
+
+    <div class="song-list">
+
+            <div class="song-row" data-src="asset/amusic/BTS - Body To Body (320).mp3" data-title="Body To Body" data-artist="BTS">
+                <span class="song-num">1</span>
+                <button class="song-play"><i class="fa-solid fa-play"></i></button>
+                <div class="song-name">
+                    <h4>Body To Body</h4>
+                    <p>BTS</p>
+                </div>
+                <div class="music-actions">
+                    <a class="music-btn" href="asset/amusic/BTS - Body To Body (320).mp3" download title="دانلود">
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                    <button class="music-btn music-like" title="لایک">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="song-row" data-src="asset/amusic/BTS - SWIM (320).mp3" data-title="SWIM" data-artist="BTS">
+                <span class="song-num">2</span>
+                <button class="song-play"><i class="fa-solid fa-play"></i></button>
+                <div class="song-name">
+                    <h4>SWIM</h4>
+                    <p>BTS</p>
+                </div>
+                <div class="music-actions">
+                    <a class="music-btn" href="asset/amusic/BTS - SWIM (320).mp3" download title="دانلود">
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                    <button class="music-btn music-like" title="لایک">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div> 
+    <div class="modal-overlay" id="loginOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="loginClose" aria-label="Close">&times;</button>
+            <h3 id="loginTitle">Login</h3>
+            <p class="modal-sub">Login to share and follow your idols.</p>
+            <div class="login-fields">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="example@gmail.com" autocomplete="email">
+                <span class="modal-error" id="emailError"></span>
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="english letters and numbers" autocomplete="current-password">
+                <span class="modal-error" id="passError"></span>
+
+                <button class="modal-btn" id="loginBtn">Login</button>
+                <p class="modal-ok" id="loginMsg"></p>
+            </div>
+            <p class="modal-register">Don't have an account? <a href="regester.html">Register now</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/player.js"></script>
+
+</body>
+</html>

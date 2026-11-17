@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | K/POP</title>
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html" class="active">COMMUNITY</a>
+            </nav>
+            <div class="nav-icons">
+                <div class="nav-search">
+                    <span><i class="fa-solid fa-search"></i></span>
+                    <input type="text" placeholder="search for your idol...">
+                </div>
+                <button class="icon-btn profile-btn" id="profileBtn" aria-label="Profile / Login" aria-haspopup="dialog">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="Banner">
+        <div class="hero-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="hero-text">
+            <h1>Join the <span>Community</span></h1>
+            <p>Share what you're listening to, talk about your favorite idols, and connect with fans who love K-pop just like you.</p>
+            <a href="register.html" class="btn-primary">Sign Up Now</a>
+        </div>
+        <img class="hero-img" src="asset/banner_com.jpg" alt="Fan listening to music with headphones">
+    </section>
+
+    <div class="section-head">
+        <h2>Latest Discussions <i class="fa-regular fa-comment"></i></h2>
+    </div>
+
+    <div class="search-tag">
+        <button id="tagSearchBtn" aria-label="Search tag"><i class="fa-solid fa-search"></i></button>
+        <input type="text" id="tagSearch" placeholder="search for your idol tag ..." autocomplete="off">
+        <span class="tag-msg" id="tagMsg"></span>
+    </div>
+
+    <main class="feed">
+        <div class="post">
+            <div class="who">
+                <img src="asset/liz.jpg" alt="ppls-profile">
+                <div class="who-id">
+                    <h3>listeningto ive 24/7</h3>
+                    <h6>@nina</h6>
+                </div>
+            </div>
+            <div class="more">...</div>
+            <div class="post-content">
+                <p>THE STAGE PREFORMANCE OF EAIGH WAS AWESOME<br>
+                    WISH WE HAD MORE FANCAMs
+                    
+                </p>
+            </div>
+            <div class="post-inter">
+                <div class="interaction">
+                    <i class="fa-regular fa-heart"> 22</i>
+                    <i class="fa-regular fa-comment"> 7 </i>
+                </div>
+                <div class="tags">
+                    <button>#MAMA</button>
+                    <button>#IVE</button>
+                    <button>#WONYOUNG</button>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="who">
+                <img src="asset/chaewon.jpg" alt="ppls-profile">
+                <div class="who-id">
+                    <h3>FEARLESS</h3>
+                    <h6>@LILLY</h6>
+                </div>
+            </div>
+            <div class="more">...</div>
+            <div class="post-content">
+                <p> I WISH WE HAD AN OFFICIAL VER  OF DAY BY DAY COVER
+                    <br>
+                    
+                </p>
+            </div>
+            <div class="post-inter">
+                <div class="interaction">
+                    <i class="fa-regular fa-heart"> 22</i>
+                    <i class="fa-regular fa-comment"> 7 </i>
+                </div>
+                <div class="tags">
+                    <button>#LESSERAFIM</button>
+                    <button>#CHEAWON</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="who">
+                <img src="asset/jk.jpg" alt="ppls-profile">
+                <div class="who-id">
+                    <h3>jk-wify</h3>
+                    <h6>@mobina</h6>
+                </div>
+            </div>
+            <div class="more">...</div>
+            <div class="post-content">
+                <p>what do you think about arirang album <br>
+                i cant stop listening to SWIM
+                </p>
+            </div>
+            <div class="post-inter">
+                <div class="interaction">
+                    <i class="fa-regular fa-heart"> 22</i>
+                    <i class="fa-regular fa-comment"> 7 </i>
+                </div>
+                <div class="tags">
+                    <button>#BTS</button>
+                    <button>#jk</button>
+                    <button>#rm</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="post-popup">
+        <button id="post" aria-label="Write a new post"><i class="fa-solid fa-plus"></i></button>
+    </div>
+
+    <div class="modal-overlay" id="postOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="postTitle">
+            <button class="modal-close" id="postClose" aria-label="Close">&times;</button>
+            <h3 id="postTitle">What are you thinking right now?</h3>
+            <p class="modal-sub">Write about your favorite artist. Add tags like #BTS so others can find your post.</p>
+            <textarea placeholder="Write something about your idol..."></textarea>
+            <div class="post-footer">
+                <button class="modal-btn">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="box">
+                <div class="logo">K/<span>POP</span> ✦</div>
+                <p>مقصد نهایی شما برای اخبار، چارت‌ها و دنیای کی‌پاپ.</p>
+            </div>
+            <div class="box">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="artists-list.html">Artists</a>
+                    <a href="#">Charts</a>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Follow Us</h4>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">SoundCloud</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 K-POP World. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="loginOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="loginClose" aria-label="Close">&times;</button>
+            <h3 id="loginTitle">Login</h3>
+            <p class="modal-sub">Login to share and follow your idols.</p>
+            <div class="login-fields">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="example@gmail.com" autocomplete="email">
+                <span class="modal-error" id="emailError"></span>
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="english letters and numbers" autocomplete="current-password">
+                <span class="modal-error" id="passError"></span>
+
+                <button class="modal-btn" id="loginBtn">Login</button>
+                <p class="modal-ok" id="loginMsg"></p>
+            </div>
+            <p class="modal-register">Don't have an account? <a href="regester.html">Register now</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/community.js"></script>
+</body>
+</html>

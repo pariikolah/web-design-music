@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artist-LE SSERAFIM</title>
+    <link rel="stylesheet" href="css/style-artist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html" class="active">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html">COMMUNITY</a>
+            </nav>
+            <div class="nav-icons">
+                <div class="nav-search">
+                    <span><i class="fa-solid fa-search"></i></span>
+                    <input type="text" placeholder="search for your idol...">
+                </div>
+                <button class="icon-btn profile-btn" id="profileBtn" aria-label="Profile / Login" aria-haspopup="dialog">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>LE SSERAFIM<br><span class="accent">르세라핌</span></h1>
+            <h5 style="color: gray;">GIRL GROUP ✦ SOURCE MUSIC (HYBE)</h5>
+            <div class="artistinfo">
+                <h4>debut : 2022</h4>
+                <h4>status : active</h4>
+            </div>
+            <button class="btn-primary">FOLLOW ARTIST</button>
+        </div>
+        <div class="grouppic">
+            <img src="asset/lesserafim.jpg" alt="">
+        </div>
+
+    </section>
+    
+    
+    <section class="about">
+        <h2 class="section-title">ABOUT</h2>
+        <p class="about-text">
+            LE SSERAFIM (르세라핌) is a South Korean girl group formed by Source Music, a label under HYBE. The name is an anagram of
+            "I'M FEARLESS". The group debuted on May 2, 2022 with the mini album "FEARLESS" and now has five members — Sakura, Chaewon, Yunjin,
+            Kazuha, and Eunchae. They are known for their strong performances and bold concepts, and their fandom is called FEARNOT.
+        </p>
+    </section>
+
+   
+    <h2 class="section-title members-title">MEMBERS</h2>
+
+    <section class="members">
+        <div class="memberspic">
+            <img src="asset/lessrafimsakura.jpg" alt="Sakura">
+            <div class="member-info">
+                <h3>Sakura</h3>
+                <p class="stage-name">Miyawaki Sakura</p>
+                <p>Position: Vocalist</p>
+                <p>Birthday: Mar 19, 1998</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/chaewon.jpg" alt="Chaewon">
+            <div class="member-info">
+                <h3>Chaewon</h3>
+                <p class="stage-name">Kim Chaewon</p>
+                <p>Position: Leader, Vocalist</p>
+                <p>Birthday: Aug 1, 2000</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/yunjin.jpg" alt="Yunjin">
+            <div class="member-info">
+                <h3>Yunjin</h3>
+                <p class="stage-name">Huh Yunjin</p>
+                <p>Position: Vocalist, Dancer</p>
+                <p>Birthday: Oct 8, 2001</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/kazuha.jpg" alt="Kazuha">
+            <div class="member-info">
+                <h3>Kazuha</h3>
+                <p class="stage-name">Nakamura Kazuha</p>
+                <p>Position: Main Dancer, Vocalist</p>
+                <p>Birthday: Aug 9, 2003</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/eunchae.jpg" alt="Eunchae">
+            <div class="member-info">
+                <h3>Eunchae</h3>
+                <p class="stage-name">Hong Eunchae</p>
+                <p>Position: Dancer, Vocalist, Maknae</p>
+                <p>Birthday: Nov 10, 2006</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <h2 class="section-title songs-title">SONGS</h2>
+    <div class="songs">
+       
+    </div>
+    <div class="modal-overlay" id="loginOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="loginClose" aria-label="Close">&times;</button>
+            <h3 id="loginTitle">Login</h3>
+            <p class="modal-sub">Login to share and follow your idols.</p>
+            <div class="login-fields">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="example@gmail.com" autocomplete="email">
+                <span class="modal-error" id="emailError"></span>
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="english letters and numbers" autocomplete="current-password">
+                <span class="modal-error" id="passError"></span>
+
+                <button class="modal-btn" id="loginBtn">Login</button>
+                <p class="modal-ok" id="loginMsg"></p>
+            </div>
+            <p class="modal-register">Don't have an account? <a href="regester.html">Register now</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | K/POP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html">COMMUNITY</a>
+            </nav>
+            <div class="nav-icons">
+                <div class="nav-search">
+                    <span><i class="fa-solid fa-search"></i></span>
+                    <input type="text" placeholder="search for your idol...">
+                </div>
+                <button class="icon-btn profile-btn" id="profileBtn" aria-label="Profile / Login" aria-haspopup="dialog">
+                    <i class="fa-regular fa-user"></i>
+                    
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slides" id="heroSlides">
+            <img src="asset/copy2.png" alt="K-POP">
+            <img src="asset/6046347929183785102.jpg" alt="K-POP">
+            <img src="asset/banner_com.jpg" alt="K-POP">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>LIVE.<br>LOVE.<span class="accent">K-POP</span></h1>
+            <p>مقصد نهایی شما برای هر چیزی که به دنیای کی‌پاپ مربوطه.</p>
+            
+            <a href="profile.html"  class="btn-primary"> EXPLORE NOW →</a>
+        </div>
+        <button class="slide-btn prev-btn" id="prevBtn" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slide-btn next-btn" id="nextBtn" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+    </section>
+
+    <main class="main-content">
+
+        <div class="news-bar">
+            <div class="news-tiitle">
+                <h2>what's new ✦</h2>
+                <a href="news.html" class="view-all">VIEW ALL →</a>
+            </div>
+            <div class="news-list">
+                <div class="news-card">
+                    <img src="asset/bts.jpg" alt="news-img">
+                    <p>BTS 'ARIRANG' Album and World Tour Make Headlines</p>
+                    <div class="date">
+                        <h5>1h ago</h5>
+                        <a href="">View more</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="asset/illit.jpg" alt="news-img">
+                    <p>ILLIT Teases Their Next Comeback</p>
+                    <div class="date">
+                        <h5>3h ago</h5>
+                        <a href="">View more</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="asset/ive news.jpg" alt="news-img">
+                    <p>IVE Confirms Special Stage at Year-End Festival</p>
+                    <div class="date">
+                        <h5>4h ago</h5>
+                        <a href="news.html">View more</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="asset/lessrafimnews.jpg" alt="news-img">
+                    <p>LE SSERAFIM Announces New Activity Schedule</p>
+                    <div class="date">
+                        <h5>5h ago</h5>
+                        <a href="news-ai.html">View more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-bar">
+            <div class="artists-title">
+                <h2>POPULAR ARTISTS ✦</h2>
+                <a href="artists-list.html" class="view-all">VIEW ALL →</a>
+            </div>
+            <div class="artists-list">
+
+                <div class="artist-card">
+                    <img src="asset/bts-g.jpg" alt="txt">
+                    <a href="artist_BTS.html">BTS</a>
+                    <div class="date">
+                        <h5>Boy Group</h5>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <img src="asset/bp.jpg" alt="Bp">
+                    <a href="">Blackpink</a>
+                    <div class="date">
+                        <h5>Girl Group</h5>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <img src="asset/ive.jpg" alt="ive">
+                    <a href="">Ive</a>
+                    <div class="date">
+                        <h5>Girl Group</h5>
+                    </div>
+                </div>
+                
+                <div class="artist-card">
+                    <img src="asset/twice.jpg" alt="TWICE">
+                    <p>TWICE</p>
+                    <div class="date">
+                        <h5>Girl Group</h5>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <img src="asset/lesserafim.jpg" alt="LESSERAFIM">
+                    <p>LESSERAFIM</p>
+                    <div class="date">
+                        <h5>Girl Group</h5>
+                    </div>
+                </div>
+                <div class="artist-card">
+                    <img src="asset/iu.jpg" alt="IU">
+                    <p>IU</p>
+                    <div class="date">
+                        <h5>Soloist</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="added-bar" id="added-bar">
+            <div class="news-tiitle">
+                <h2>Recently Added ✦</h2>
+                <a href="artists-list-ai.html" class="view-all">VIEW ALL →</a>
+            </div>
+            <div class="added-list">
+                <div class="added-card">
+                    <div class="added-img-wrap">
+                        <img src="asset/swim.jpg" alt="SWIM">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>SWIM</p>
+                    <span class="added-artist">BTS</span>
+                    <span class="added-date">Oct 8, 2026</span>
+                </div>
+                <div class="added-card">
+                    <div class="added-img-wrap">
+                        <img src="asset/swim.jpg" alt="Body to Body">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>Body to Body</p>
+                    <span class="added-artist">BTS</span>
+                    <span class="added-date">Oct 8, 2026</span>
+                </div>
+                <div class="added-card">
+                    <div class="added-img-wrap">
+                        <img src="asset/ive div.jpg" alt="Love Dive">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>Love Dive</p>
+                    <span class="added-artist">IVE</span>
+                    <span class="added-date">Oct 6, 2026</span>
+                </div>
+                <div class="added-card">
+                    <div class="added-img-wrap">
+                        <img src="asset/afterlike.jpg" alt="After Like">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>After Like</p>
+                    <span class="added-artist">IVE</span>
+                    <span class="added-date">Oct 6, 2026</span>
+                </div>
+                <div class="added-card">
+                    <div class="added-img-wrap">
+                        <img src="asset/lesserafim.jpg" alt="Antifragile">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>Antifragile</p>
+                    <span class="added-artist">LE SSERAFIM</span>
+                    <span class="added-date">Oct 2, 2026</span>
+                </div>
+                <div class="added-card">
+                    <div class="added-img-wrap">
+                        <img src="asset/perfect night.jpg" alt="Perfect Night">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>Perfect Night</p>
+                    <span class="added-artist">LE SSERAFIM</span>
+                    <span class="added-date">Oct 2, 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="videos-bar">
+            <div class="news-tiitle">
+                <h2>Latest Music Videos ✦</h2>
+                <a href="mv.html" class="view-all">VIEW ALL →</a>
+            </div>
+            <div class="videos-list">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="asset/ateez.jpg" alt="ATEEZ – WORK">
+                    </div>
+                    <p>ATEEZ – WORK</p>
+                    <span class="video-artist">ATEEZ</span>
+                    <span class="video-date">1 day ago</span>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="asset/skiz.jpg" alt="Stray Kids – Chk Chk Boom">
+                    </div>
+                    <p>Stray Kids – Chk Chk Boom</p>
+                    <span class="video-artist">Stray Kids</span>
+                    <span class="video-date">3 days ago</span>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="asset/aespa.jpg" alt="aespa – Supernova">
+                        
+                    </div>
+                    <p>aespa – Supernova</p>
+                    <span class="video-artist">aespa</span>
+                    <span class="video-date">4 days ago</span>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="asset/iu mv.jpg" alt="IU – Love wins all">
+                    </div>
+                    <p>IU – Love wins all</p>
+                    <span class="video-artist">IU</span>
+                    <span class="video-date">5 days ago</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="box">
+                <div class="logo">K/<span>POP</span> ✦</div>
+                <p>مقصد نهایی شما برای اخبار، چارت‌ها و دنیای کی‌پاپ.</p>
+            </div>
+            <div class="box">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="artists-list.html">Artists</a>
+                    <a href="#">Charts</a>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Follow Us</h4>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">SoundCloud</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 K-POP World. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="loginOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="loginClose" aria-label="Close">&times;</button>
+            <h3 id="loginTitle">Login</h3>
+            <p class="modal-sub">Login to share and follow your idols.</p>
+            <div class="login-fields">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="example@gmail.com" autocomplete="email">
+                <span class="modal-error" id="emailError"></span>
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="english letters and numbers" autocomplete="current-password">
+                <span class="modal-error" id="passError"></span>
+
+                <button class="modal-btn" id="loginBtn">Login</button>
+                <p class="modal-ok" id="loginMsg"></p>
+            </div>
+            <p class="modal-register">Don't have an account? <a href="regester.html">Register now</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

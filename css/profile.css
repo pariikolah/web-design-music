@@ -1,0 +1,780 @@
+:root{
+    --bg: #0a0612;
+    --bg-soft: #150e24;
+    --card: #1a1128;
+    --border: #2e2140;
+    --purple: #9b5cf6;
+    --purple-dark: #7c3aed;
+    --pink: #c084fc;
+    --text: #f5f3fa;
+    --text-dim: #a89bc2;
+    --radius: 16px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle at 15% 10%, rgba(155, 92, 246, 0.15), transparent 40%),
+                      radial-gradient(circle at 85% 30%, rgba(192, 132, 252, 0.1), transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{ font-family: 'Unbounded', sans-serif; }
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{ list-style: none; }
+img{ max-width: 100%; }
+
+a:focus-visible,
+button:focus-visible{
+    outline: 2px solid var(--purple);
+    outline-offset: 2px;
+}
+
+/* ---------- هدر و نویگیشن ---------- */
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10,8,16,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.logo{
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.logo span{ color: var(--purple); }
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+.nav-links a{
+    color: var(--text-dim);
+    white-space: nowrap;
+    transition: color .2s;
+}
+.nav-links a:hover, .nav-links a.active{ color: var(--text); }
+.nav-links a.active{ color: var(--purple); }
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-search{
+    width: 180px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.nav-search span{
+    width: 40px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.234);
+    border-radius: 12px 0px 0px 12px;
+}
+.nav-search input{
+    flex: 1;
+    min-width: 0;
+    height: 25px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.234);
+    color: var(--text);
+    border: none;
+    outline: none;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.icon-btn{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+.profile-btn{
+    background: transparent;
+    color: var(--text);
+    transition: border-color .2s, color .2s;
+}
+.profile-btn img{
+    border-radius: 70%;
+    border: 1px solid var(--border);
+}
+.profile-btn i{ font-size: 16px; }
+.profile-btn:hover,
+.profile-btn:focus-visible{
+    border-color: var(--purple);
+    color: var(--purple);
+    outline: none;
+}
+
+@media (max-width: 900px){
+    .nav-wrap{
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding: 12px 16px;
+    }
+    .nav-links{
+        order: 3;
+        width: 100%;
+        gap: 22px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+}
+@media (max-width: 480px){
+    .logo{ font-size: 18px; }
+    .nav-search{ width: 140px; }
+}
+
+/* ---------- چیدمان صفحه‌ی پروفایل ---------- */
+.profile-layout{
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    padding: 24px;
+    align-items: start;
+}
+
+/* ---------- سایدبار ---------- */
+.sidebar{
+    position: sticky;
+    top: 90px;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+.side-links{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.side-link{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background .2s, color .2s;
+}
+.side-link i{
+    width: 18px;
+    text-align: center;
+}
+.side-link:hover{ color: var(--text); }
+.side-link.active{
+    background: rgba(155, 92, 246, 0.2);
+    color: var(--text);
+}
+
+.mini-player{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+.player-cover{
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.player-info h4{ font-size: 13px; }
+.player-info p{
+    font-size: 12px;
+    color: var(--text-dim);
+}
+.player-bar{
+    height: 4px;
+    border-radius: 999px;
+    background: var(--border);
+}
+.player-bar span{
+    display: block;
+    width: 45%;
+    height: 100%;
+    border-radius: 999px;
+    background: var(--purple);
+}
+.player-time{
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-dim);
+}
+.player-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-dim);
+}
+.play-main{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #c9a6f7;
+    color: #1a0e2e;
+}
+
+/* ---------- بنر پروفایل ---------- */
+.profile-main{
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile-banner{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px 28px;
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(120deg, #1a0e2e, #2d1155 60%);
+}
+.banner-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .45;
+}
+.banner-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10,6,18,0.85) 15%, rgba(10,6,18,0.3) 60%, rgba(10,6,18,0.1));
+}
+
+.profile-avatar{
+    position: relative;
+    z-index: 2;
+    flex: none;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #c9a6f7;
+    box-shadow: 0px 0px 8px 4px rgba(155, 92, 246, 0.6);
+}
+
+.profile-info{
+    position: relative;
+    z-index: 2;
+    flex: 1 1 260px;
+    min-width: 0;
+}
+.profile-info h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 800;
+}
+.profile-info h1 i{
+    font-size: 18px;
+    color: var(--purple);
+}
+.profile-bio{
+    margin: 6px 0 12px;
+    font-size: 14px;
+}
+.profile-meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+.profile-meta i{ margin-right: 6px; }
+
+.profile-stats{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 28px;
+    text-align: center;
+}
+.profile-stats strong{
+    display: block;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px;
+}
+.profile-stats span{
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+.edit-btn{
+    position: relative;
+    z-index: 2;
+    padding: 12px 24px;
+    border: 1px solid var(--purple);
+    border-radius: 12px;
+    background: rgba(155, 92, 246, 0.15);
+    color: var(--text);
+    font: 600 14px 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background .2s;
+}
+.edit-btn:hover{ background: rgba(155, 92, 246, 0.35); }
+
+/* ---------- کارت‌ها ---------- */
+.profile-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.profile-card{
+    min-width: 0;
+    padding: 20px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+.card-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.card-head h2{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+}
+.view-all{
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .2s;
+}
+.view-all:hover{ color: var(--text); }
+
+/* هنرمندهایی که دنبال میشن */
+.followed-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px 12px;
+}
+.followed-item{
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+}
+.followed-item img{
+    width: 100%;
+    max-width: 90px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--purple);
+    margin-bottom: 8px;
+}
+.followed-item h4{
+    max-width: 100%;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.followed-item p{
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+/* آهنگ‌ها */
+.song-item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+}
+.song-cover{
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.song-text{
+    flex: 1;
+    min-width: 0;
+}
+.song-text h4{ font-size: 14px; }
+.song-text p{
+    font-size: 12px;
+    color: var(--text-dim);
+}
+.song-text h4,
+.song-text p,
+.disc-text h4,
+.disc-text p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.song-time,
+.song-more{
+    flex: none;
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+/* بحث‌ها */
+.disc-item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+}
+.disc-item:first-child{ padding-top: 0; }
+.disc-item + .disc-item{ border-top: 1px solid var(--border); }
+.disc-item img{
+    flex: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.disc-text{
+    flex: 1;
+    min-width: 0;
+}
+.disc-text h4{ font-size: 14px; }
+.disc-text p{
+    font-size: 12px;
+    color: var(--text-dim);
+}
+.disc-text .disc-meta{
+    margin-top: 2px;
+    font-size: 11px;
+    opacity: .8;
+}
+.disc-item > i{
+    flex: none;
+    color: var(--text-dim);
+}
+
+/* ---------- ریسپانسیو ---------- */
+@media (max-width: 1100px){
+    .profile-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px){
+    .profile-layout{
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+    .sidebar{
+        position: static;
+        min-height: 0;
+    }
+    .side-links{
+        flex-direction: row;
+        gap: 8px;
+    }
+    .side-link{
+        flex: 1;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 700px){
+    .profile-banner{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 28px 20px;
+    }
+    .profile-info{ flex: none; width: 100%; }
+    .profile-info h1{ justify-content: center; }
+    .profile-meta{ justify-content: center; }
+    .profile-stats{ gap: 24px; }
+}
+
+@media (max-width: 560px){
+    .followed-grid{ grid-template-columns: repeat(3, 1fr); }
+    .profile-card{ padding: 16px; }
+    .side-link i{ display: none; }
+}
+
+/* ---------- فوتر ---------- */
+.site-footer{
+    width: 100%;
+    background-color: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    padding-top: 50px;
+    color: var(--text);
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 30px 40px 30px;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box h4{
+    color: var(--purple);
+    font-size: 16px;
+    margin-bottom: 18px;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.box p{
+    color: var(--text-dim);
+    font-size: 13px;
+    max-width: 260px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-links a{
+    color: var(--text-dim);
+    font-size: 13px;
+    transition: color 0.2s;
+}
+.footer-links a:hover{ color: var(--text); }
+
+.footer-bottom{
+    text-align: center;
+    background-color: var(--bg);
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-dim);
+    width: 100%;
+}
+
+@media (max-width: 600px){
+    .site-footer{
+        margin-top: 40px;
+        padding-top: 36px;
+    }
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 28px;
+    }
+    .box .logo{ justify-content: center; }
+    .box p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-links{ align-items: center; }
+}
+
+/* ---------- پاپ‌آپ (لاگین و ...) ---------- */
+.modal-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 200;
+}
+.modal-overlay.show{ display: flex; }
+
+.modal-box{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    max-height: 100%;
+    overflow-y: auto;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.modal-box h3{
+    font-size: 20px;
+    padding-right: 30px;
+}
+.login-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.modal-sub{
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.modal-box label{
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 6px;
+}
+.modal-box input,
+.modal-box textarea{
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+.modal-box textarea{
+    height: 180px;
+    border-radius: 12px;
+    resize: none;
+}
+.modal-box input:focus,
+.modal-box textarea:focus{
+    outline: none;
+    border-color: var(--purple);
+}
+
+.modal-error{
+    display: block;
+    min-height: 18px;
+    font-size: 12px;
+    color: #f87171;
+}
+.modal-ok{
+    min-height: 18px;
+    font-size: 13px;
+    color: #4ade80;
+    text-align: center;
+}
+
+.modal-btn{
+    margin-top: 12px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 999px;
+    background: var(--purple-dark);
+    color: #fff;
+    font: 700 14px 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+.modal-btn:hover{
+    background: var(--purple);
+    transform: translateY(-1px);
+}
+
+.modal-close{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+.modal-close:hover{ color: var(--text); }
+
+.modal-register{
+    margin-top: 6px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+.modal-register a{
+    color: var(--purple);
+    font-weight: 700;
+}
+
+@media (max-width: 480px){
+    .modal-box{ padding: 28px 20px 22px; }
+}

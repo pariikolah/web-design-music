@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artist-RED VELVET</title>
+    <link rel="stylesheet" href="css/style-artist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">K/<span>POP</span> ✦</div>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="news.html">NEWS</a>
+                <a href="artists-list.html" class="active">ARTISTS</a>
+                <a href="recentlyadded.html">RECENTLY ADDED</a>
+                <a href="community.html">COMMUNITY</a>
+            </nav>
+            <div class="nav-icons">
+                <div class="nav-search">
+                    <span><i class="fa-solid fa-search"></i></span>
+                    <input type="text" placeholder="search for your idol...">
+                </div>
+                <button class="icon-btn profile-btn" id="profileBtn" aria-label="Profile / Login" aria-haspopup="dialog">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>RED VELVET<br><span class="accent">레드벨벳</span></h1>
+            <h5 style="color: gray;">GIRL GROUP ✦ SM ENTERTAINMENT</h5>
+            <div class="artistinfo">
+                <h4>debut : 2014</h4>
+                <h4>status : active</h4>
+            </div>
+            <button class="btn-primary">FOLLOW ARTIST</button>
+        </div>
+        <div class="grouppic">
+            <img src="asset/redvelvet.jpg" alt="">
+        </div>
+
+    </section>
+    
+    
+    <section class="about">
+        <h2 class="section-title">ABOUT</h2>
+        <p class="about-text">
+            RED VELVET (레드벨벳) is a South Korean girl group formed by SM Entertainment. The group debuted on August 1, 2014 with the single "Happiness",
+            and Yeri joined in 2015 to complete the five-member lineup — Irene, Seulgi, Wendy, Joy, and Yeri. Their name reflects two sides of their music:
+            "Red" for bright, bold pop and "Velvet" for smooth, mature R&B. Their fandom is called ReVeluv.
+        </p>
+    </section>
+
+   
+    <h2 class="section-title members-title">MEMBERS</h2>
+
+    <section class="members">
+        <div class="memberspic">
+            <img src="asset/irene.jpg" alt="Irene">
+            <div class="member-info">
+                <h3>Irene</h3>
+                <p class="stage-name">Bae Joohyun</p>
+                <p>Position: Leader, Lead Rapper, Visual</p>
+                <p>Birthday: Mar 29, 1991</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/seulgi.jpg" alt="Seulgi">
+            <div class="member-info">
+                <h3>Seulgi</h3>
+                <p class="stage-name">Kang Seulgi</p>
+                <p>Position: Main Dancer, Lead Vocalist</p>
+                <p>Birthday: Feb 10, 1994</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/wendy.jpg" alt="Wendy">
+            <div class="member-info">
+                <h3>Wendy</h3>
+                <p class="stage-name">Son Seungwan</p>
+                <p>Position: Main Vocalist</p>
+                <p>Birthday: Feb 21, 1994</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/joy.jpg" alt="Joy">
+            <div class="member-info">
+                <h3>Joy</h3>
+                <p class="stage-name">Park Sooyoung</p>
+                <p>Position: Vocalist, Visual</p>
+                <p>Birthday: Sep 3, 1996</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+        <div class="memberspic">
+            <img src="asset/yeri.jpg" alt="Yeri">
+            <div class="member-info">
+                <h3>Yeri</h3>
+                <p class="stage-name">Kim Yerim</p>
+                <p>Position: Vocalist, Rapper, Maknae</p>
+                <p>Birthday: Mar 5, 1999</p>
+                <a href="#" class="solo-link">solo</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <h2 class="section-title songs-title">SONGS</h2>
+    <div class="songs">
+       
+    </div>
+    <div class="modal-overlay" id="loginOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="loginClose" aria-label="Close">&times;</button>
+            <h3 id="loginTitle">Login</h3>
+            <p class="modal-sub">Login to share and follow your idols.</p>
+            <div class="login-fields">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="example@gmail.com" autocomplete="email">
+                <span class="modal-error" id="emailError"></span>
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="english letters and numbers" autocomplete="current-password">
+                <span class="modal-error" id="passError"></span>
+
+                <button class="modal-btn" id="loginBtn">Login</button>
+                <p class="modal-ok" id="loginMsg"></p>
+            </div>
+            <p class="modal-register">Don't have an account? <a href="regester.html">Register now</a></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>
